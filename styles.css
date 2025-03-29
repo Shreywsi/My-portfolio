@@ -25,10 +25,10 @@ header {
     align-items: center;
     font-size: 36px;
     color: white;
-    font-family: "Poltawski Nowy", serif;
+    font-family: "Poltawski Nowy", serif;  
 }
-
 .star {
+    
     color: #FF6B35; /* Orange color */
     font-size: 40px; /* Adjust size */
     margin-right: 10px; /* Adds spacing */
@@ -36,6 +36,7 @@ header {
 
 /* Navbar */
 nav a {
+    transition: transform 0.3s ease, color 0.3s ease;
     font-size: 25px;
     margin: 0 50px;
     color: #DFDDC1;
@@ -43,6 +44,10 @@ nav a {
     font-family: "Poltawski Nowy", serif;
 }
 
+nav a:hover {
+    transform: scale(1.1);
+    color: #ff6b35;
+}
 nav a.cta {
     background-color: #ff6b35;
     padding: 10px 20px;
@@ -87,13 +92,21 @@ main {
 }
 
 .image-container img {
+    animation: float 4s ease-in-out infinite;
     width: 100%;
     height: auto;
     border-radius: 10px;
     z-index: 2;
 
 }
-
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 /* Portfolio Text */
 .text-content {
     position: relative;
@@ -135,4 +148,19 @@ main {
     bottom: 0; /* Moves it to the very bottom */
     left: 0;
 }
+.glow-effect {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 80%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: fadeOut 0.5s ease-out;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(2); }
+}
+
 

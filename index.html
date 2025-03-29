@@ -11,7 +11,7 @@
 <body>
     <header>
         <h1 class="name">
-            <span class="star">★</span>Shreyasi Soumya
+            <span class="star">★</span><span id="typing-text"></span>
         </h1>
         <nav>
             <a href="#about">About me</a>
@@ -32,7 +32,25 @@
                 <h2 class="endportfolio">PORTFOLIO</h2>
             </div>
         </div>
-        <div class="bottom-black-bg"></div> <!-- Black Background at Bottom -->
+        <div class="bottom-black-bg"></div>
     </main>
+    
+    <script>
+        const nameText = "Shreyasi Soumya";
+        let index = 0;
+        function typeEffect() {
+            const typingSpan = document.getElementById("typing-text");
+            if (!typingSpan) return;
+            if (index < nameText.length) {
+                typingSpan.innerHTML += nameText[index];
+                index++;
+                setTimeout(typeEffect, 150);
+            }
+        }
+        
+        window.onload = () => {
+            setTimeout(typeEffect, 500);
+        };
+    </script>
 </body>
 </html>
