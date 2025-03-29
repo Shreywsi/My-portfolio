@@ -1,0 +1,138 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #263824 60%, #000 40%);
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #DFDDC1;
+    padding: 20px;
+    width: 100%;
+    font-family: "Poltawski Nowy", serif;
+}
+.name {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    color: white;
+    font-family: "Poltawski Nowy", serif;
+}
+
+.star {
+    color: #FF6B35; /* Orange color */
+    font-size: 40px; /* Adjust size */
+    margin-right: 10px; /* Adds spacing */
+}
+
+/* Navbar */
+nav a {
+    font-size: 25px;
+    margin: 0 50px;
+    color: #DFDDC1;
+    text-decoration: none;
+    font-family: "Poltawski Nowy", serif;
+}
+
+nav a.cta {
+    background-color: #ff6b35;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    padding-left: 3.5%;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 50px;
+    overflow: hidden; /* Prevents text from escaping */
+}
+
+
+/* Moved Image to the Left and Lower */
+.image-container {
+    position: relative;
+    z-index: 2;
+    filter: blur(1.5px);
+    width: 600px;
+    height: 600px;
+    margin-right: -200px; /* Moved more to the left */
+    margin-top: 90px;   /* Pushed lower */
+    flex-shrink: 0; /* Prevents shrinking */
+    border: 2px solid black; /* Adds black border */
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(29, 28, 28, 0.5);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    z-index: 2;
+
+}
+
+/* Portfolio Text */
+.text-content {
+    position: relative;
+    color: #DFDDC1;
+    font-family: "Porter Sans Block", sans-serif;
+    text-align: center;
+    max-width: 50%; /* Prevents overflowing */
+}
+
+
+.text-content h2 {
+    font-size: 140px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    letter-spacing: 30px;
+    position: relative;
+    -webkit-text-stroke: 4px rgb(51, 42, 42);  /* Thick black stroke */
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8);  /* 3D effect */
+}
+
+/* First and Last "PORTFOLIO" (above image) */
+.endportfolio {
+    position: relative;
+    z-index: 2; /* Ensures it's above the image */
+}
+
+/* Middle "PORTFOLIO" (behind the image) */
+.midportfolio {
+    position: relative;
+    z-index: 1; /* Pushes it behind */
+   
+    
+}
+
+.bottom-black-bg {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    position: absolute; /* Takes it out of the normal flow */
+    bottom: 0; /* Moves it to the very bottom */
+    left: 0;
+}
+
