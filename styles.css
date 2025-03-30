@@ -3,26 +3,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;  /* Enables smooth scrolling */
 }
 
 body {
-    background: url("images/mainbg.png") no-repeat center center fixed;
-    background-size: cover;
-    font-family: "Poltawski Nowy", serif;
-    color: #DFDDC1;
+    font-family: Arial, sans-serif;
+    background: url('images/mainbg.png') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-/* Header */
+/* Header Styling */
 header {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #DFDDC1;
     padding: 20px;
     width: 100%;
+    font-family: "Poltawski Nowy", serif;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .name {
@@ -44,22 +49,32 @@ nav a {
     margin: 0 50px;
     color: #DFDDC1;
     text-decoration: none;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: color 0.3s ease-in-out;
+}
+header.scrolled nav a {
+    color: #283C26; /* Dark Green */
 }
 
+header.scrolled .name {
+    color: #283C26; /* Change "Shreyasi Soumya" text to dark green */
+}
+
+header.scrolled .star {
+    color: #ff6b35; /* Change star color */
+}
 nav a:hover {
     transform: scale(1.1);
-    color: #FF6B35;
+    color: #ff6b35;
 }
 
 nav a.cta {
-    background-color: #FF6B35;
+    background-color: #ff6b35;
     padding: 10px 20px;
     border-radius: 50px;
     color: white;
 }
 
-/* Portfolio Section */
+/* Main Section */
 main {
     display: flex;
     flex-direction: column;
@@ -68,62 +83,81 @@ main {
     padding-left: 3.5%;
 }
 
+/* Portfolio Section */
 .portfolio-section {
     display: flex;
     align-items: center;
+    width: 100%;
     padding: 50px;
     overflow: hidden;
 }
 
+/* Image Styling */
 .image-container {
+    filter: blur(1.5px);
     width: 600px;
     height: 600px;
     margin-right: -200px;
     margin-top: 90px;
-    filter: blur(1.5px);
+    flex-shrink: 0;
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 10px 10px 30px rgba(29, 28, 28, 0.5);
 }
 
 .image-container img {
+    animation: float 4s ease-in-out infinite;
     width: 100%;
     height: auto;
     border-radius: 10px;
-    animation: float 4s ease-in-out infinite;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Portfolio Text */
 .text-content {
+    color: #DFDDC1;
     font-family: "Porter Sans Block", sans-serif;
     text-align: center;
     max-width: 50%;
 }
 
-.portfolio {
+.text-content h2 {
     font-size: 140px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
     letter-spacing: 30px;
-    -webkit-text-stroke: 4px black;
-    text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 4px rgb(51, 42, 42);
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8);
 }
 
-.mid {
-    z-index: 1;
-}
-
+/* About Me Section */
 #aboutme {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    background: url('images/aboutmebg.png') no-repeat center center/cover;
     height: 100vh;
-    font-size: 24px;
-    background: linear-gradient(to bottom, #DFDDC1 60%, #283C26 40%);
+    width: 100%;
     color: black;
+    font-family: "Poltawski Nowy", serif;
+    text-align: center;
+}
+
+#aboutme h1 {
+    font-size: 50px;
+}
+
+#aboutme p {
+    font-size: 22px;
+    max-width: 70%;
+    margin-top: 10px;
 }
