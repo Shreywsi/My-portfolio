@@ -1,0 +1,59 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url("images/aboutmebg.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Poltawski Nowy", serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    color: #283C26;
+}
+
+.star {
+    color: #FF6B35;
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+/* Navbar */
+nav a {
+    font-size: 25px;
+    margin: 0 50px;
+    color: #283C26;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    color: #FF6B35;
+}
+
+nav a.cta {
+    background-color: #F0D85B;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+}
