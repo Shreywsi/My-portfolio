@@ -54,7 +54,10 @@ nav a {
 header.scrolled nav a {
     color: #283C26; /* Dark Green */
 }
-
+header.scrolled nav a.cta {
+    color: white !important; /* Keeps "Get in touch!" white */
+    background-color: #ff6b35; /* Ensures the button retains its original background */
+}
 header.scrolled .name {
     color: #283C26; /* Change "Shreyasi Soumya" text to dark green */
 }
@@ -90,6 +93,7 @@ main {
     width: 100%;
     padding: 50px;
     overflow: hidden;
+    margin-top: 50px;
 }
 
 /* Image Styling */
@@ -98,7 +102,7 @@ main {
     width: 600px;
     height: 600px;
     margin-right: -200px;
-    margin-top: 90px;
+    margin-top: 100px;
     flex-shrink: 0;
     border: 2px solid black;
     border-radius: 10px;
