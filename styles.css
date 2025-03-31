@@ -1,3 +1,4 @@
+
 /* General Reset */
 * {
     margin: 0;
@@ -54,10 +55,7 @@ nav a {
 header.scrolled nav a {
     color: #283C26; /* Dark Green */
 }
-header.scrolled nav a.cta {
-    color: white !important; /* Keeps "Get in touch!" white */
-    background-color: #ff6b35; /* Ensures the button retains its original background */
-}
+
 header.scrolled .name {
     color: #283C26; /* Change "Shreyasi Soumya" text to dark green */
 }
@@ -93,7 +91,7 @@ main {
     width: 100%;
     padding: 50px;
     overflow: hidden;
-    margin-top: 50px;
+    margin-top: 50px; /* Pushes entire section lower */
 }
 
 /* Image Styling */
@@ -131,6 +129,7 @@ main {
     font-family: "Porter Sans Block", sans-serif;
     text-align: center;
     max-width: 50%;
+    margin-top: 60px;
 }
 
 .text-content h2 {

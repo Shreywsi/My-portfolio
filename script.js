@@ -1,3 +1,4 @@
+
 // Play sound on clicking navbar links
 document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", () => {
