@@ -251,6 +251,154 @@ main {
     font-size: 16px;
     z-index: 10; /* Higher than the image */
 }
+#aboutme {
+    padding-bottom: 120px; /* Add a bit of space to accommodate the peek */
+}
+/*---------------------------------------------------------------------------*/
+/* Resume Section */
+#resume {
+    margin-top: -200px;
+    position: relative;
+    z-index: 1;
+}
 
+.resume-container {
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+}
 
+.resume-header h1 {
+    letter-spacing: 2px;
+    font-size: 100px;
+    margin-bottom: 10px;
+    font-family: 'Ranchers', cursive;
+    color: #F0D85B;
+}
 
+.resume-header p {
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.resume-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.resume-column {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+.resume-column h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #ff6b35;
+}
+
+.resume-column p,
+.resume-column ul {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.resume-download {
+    margin-top: 40px;
+}
+
+.download-btn {
+    background-color: #ff6b35;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #e75a2a;
+}
+
+.section-divider {
+    text-align: center;
+    margin-top: -60px;
+    font-size: 30px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Technical Skills Section */
+#technical-skills {
+    background-color: #2c3b2c;
+    color: white;
+    padding: 60px 80px; /* push it in from left edge */
+    font-family: 'Porter Sans Block', sans-serif;
+    text-align: left;
+}
+
+.skills-container {
+    display: block; /* disable flex */
+    margin: 0;       /* remove auto centering */
+    padding: 0;
+}
+
+.skills-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.skills-heading {
+    color: #F0D85B;
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: 'Ranchers', cursive;
+}
+
+.skills-subheading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Poltawski Nowy', serif;
+}
+
+.skills-list {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+
+.skills-list ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.skills-tags {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+}
